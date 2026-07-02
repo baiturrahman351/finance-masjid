@@ -388,6 +388,7 @@ textarea{resize:vertical;min-height:60px}
   <div class="topbar-title" id="topbar-title">Dashboard</div>
   <div class="topbar-sub" id="topbar-sub"></div>
   <div class="topbar-right">
+    <div id="topbar-sync-badge" onclick="goPage('sync')" style="display:none;cursor:pointer;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:5px 10px;border-radius:20px;transition:background .2s"></div>
     <div class="topbar-date" id="topbar-date"></div>
   </div>
 </div>
@@ -3042,6 +3043,12 @@ function ghSaveSettings(){
   const msg=document.getElementById('gh-settings-saved-msg');
   if(msg){msg.style.display='inline';setTimeout(()=>msg.style.display='none',3000);}
   showToast('Pengaturan GitHub disimpan ✓');
+  const s=ghGetSettings();
+  if(!s.autosync||!s.token||!s.repo){ syncBadgeSet('off'); }
+  else {
+    const last=localStorage.getItem(GH_SK.lastSync);
+    syncBadgeSet(last?'success':'pending', last?('Tersimpan ke GitHub · '+new Date(last).toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'})):'Belum pernah sinkron');
+  }
 }
 // Gabungkan token+repo+branch+path jadi satu kode yang bisa di-copy-paste ke laptop lain
 // (menghindari ketik ulang token yang panjang & rawan typo). Ini BUKAN enkripsi, hanya encoding.
@@ -3150,12 +3157,31 @@ async function ghApiRequest(url,opts){
   return res;
 }
 
+// ── Badge status sinkron di topbar (kelihatan di semua halaman) ──
+function syncBadgeSet(state,text){
+  const el=document.getElementById('topbar-sync-badge');
+  if(!el) return;
+  if(state==='off'){ el.style.display='none'; return; }
+  const styles={
+    pending:{bg:'#fff4d6',color:'#8a6100',icon:'●'},
+    syncing:{bg:'#fff4d6',color:'#8a6100',icon:'↻'},
+    success:{bg:'#d9f2e3',color:'#0f7a45',icon:'✓'},
+    error:{bg:'#fbdada',color:'#b3261e',icon:'!'}
+  };
+  const st=styles[state]||styles.pending;
+  el.style.display='flex';
+  el.style.background=st.bg;
+  el.style.color=st.color;
+  el.innerHTML=`<span style="font-size:12px">${st.icon}</span><span>${text}</span>`;
+}
+
 async function ghUploadNow(manualTrigger){
   const s=ghGetSettings();
   if(!s.token||!s.repo){ghRenderStatus('Isi & simpan Token dan Repository dulu.',true);if(manualTrigger)showToast('Lengkapi pengaturan GitHub dulu');return;}
   if(ghSyncing) return;
   ghSyncing=true;
   ghRenderStatus('Mengirim data ke GitHub…');
+  if(s.autosync) syncBadgeSet('syncing','Menyimpan ke GitHub…');
   try{
     const apiUrl=`https://api.github.com/repos/${s.repo}/contents/${encodeURIComponent(s.path).replace(/%2F/g,'/')}`;
     // Ambil sha file saat ini (kalau sudah ada) supaya update, bukan bikin file baru
@@ -3178,9 +3204,11 @@ async function ghUploadNow(manualTrigger){
     ghHideUpdateBanner();
     ghRenderStatus('Berhasil disimpan ke GitHub ✓');
     if(manualTrigger) showToast('Data berhasil disimpan ke GitHub ✓');
+    if(s.autosync) syncBadgeSet('success','Tersimpan ke GitHub · '+new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'}));
   }catch(err){
     ghRenderStatus('Gagal sinkron: '+err.message,true);
     if(manualTrigger) showToast('Gagal sinkron ke GitHub: '+err.message);
+    if(s.autosync) syncBadgeSet('error','Gagal sinkron, klik untuk cek');
   }finally{
     ghSyncing=false;
   }
@@ -3217,6 +3245,7 @@ async function ghDownloadNow(){
 function markDirty(){
   const s=ghGetSettings();
   if(!s.autosync||!s.token||!s.repo) return;
+  syncBadgeSet('pending','Ada perubahan, akan disimpan…');
   if(ghAutoSyncTimer) clearTimeout(ghAutoSyncTimer);
   ghAutoSyncTimer=setTimeout(()=>{ghUploadNow(false);},4000);
 }
@@ -3351,6 +3380,13 @@ populateTrxFilters();
 populateTrxBarangSelect();
 renderDashboard();
 ghCheckForRemoteUpdate();
+(function initSyncBadge(){
+  const s=ghGetSettings();
+  if(!s.autosync||!s.token||!s.repo){ syncBadgeSet('off'); return; }
+  const last=localStorage.getItem(GH_SK.lastSync);
+  if(last) syncBadgeSet('success','Tersimpan ke GitHub · '+new Date(last).toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'}));
+  else syncBadgeSet('pending','Belum pernah sinkron');
+})();
 </script>
 </body>
 </html>
