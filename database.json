@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "savedAt": "2026-07-04T02:13:00.543Z",
+    "savedAt": "2026-07-04T07:02:54.972Z",
     "app": "masjid-app"
   },
   "keu": [
@@ -135,6 +135,17 @@
       "kat": "Kas Umum",
       "masuk": 954000,
       "keluar": 0
+    },
+    {
+      "id": 1783148569560,
+      "tanggal": "2026-06-28",
+      "minggu": 5,
+      "bulan": "Juni",
+      "tahun": 2026,
+      "ket": "Pulsa Listrik",
+      "kat": "Kas Umum",
+      "masuk": 0,
+      "keluar": 260000
     },
     {
       "id": 1783086689737,
