@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "savedAt": "2026-07-04T09:34:09.508Z",
+    "savedAt": "2026-07-07T06:55:25.470Z",
     "app": "masjid-app"
   },
   "keu": [
@@ -289,6 +289,17 @@
       "kat": "Kas Pembangunan",
       "masuk": 0,
       "keluar": 20000
+    },
+    {
+      "id": 1783407301242,
+      "tanggal": "2026-07-05",
+      "minggu": 1,
+      "bulan": "Juli",
+      "tahun": 2026,
+      "ket": "Konsumsi Rapat Takmir",
+      "kat": "Kas Umum",
+      "masuk": 0,
+      "keluar": 189
     }
   ],
   "inv": [],
