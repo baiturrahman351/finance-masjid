@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "savedAt": "2026-07-07T06:55:25.470Z",
+    "savedAt": "2026-07-08T01:27:23.945Z",
     "app": "masjid-app"
   },
   "keu": [
@@ -299,7 +299,7 @@
       "ket": "Konsumsi Rapat Takmir",
       "kat": "Kas Umum",
       "masuk": 0,
-      "keluar": 189
+      "keluar": 189000
     }
   ],
   "inv": [],
