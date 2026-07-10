@@ -200,6 +200,48 @@ textarea{resize:vertical;min-height:60px}
 .note-list-item .note-isi{font-size:12.5px;color:var(--text);white-space:pre-wrap;line-height:1.5}
 .note-list-item .note-actions{display:flex;gap:5px;margin-top:8px}
 .note-empty{text-align:center;padding:24px 12px;color:var(--text3);font-size:12.5px}
+.peng-admin-item{border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;background:#fff;display:flex;gap:12px;align-items:flex-start}
+.peng-admin-icon{width:38px;height:38px;border-radius:10px;background:var(--emas-pale);color:var(--emas);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.peng-admin-body{flex:1;min-width:0}
+.peng-admin-judul{font-size:13.5px;font-weight:700;color:var(--text)}
+.peng-admin-meta{font-size:11px;color:var(--text3);margin-top:2px}
+.peng-admin-snippet{font-size:12px;color:var(--text2);margin-top:6px;line-height:1.5;white-space:pre-wrap}
+.peng-admin-thumb{width:100%;max-width:220px;max-height:120px;object-fit:cover;border-radius:8px;margin-top:8px;display:block;border:1px solid var(--border)}
+.peng-admin-actions{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.jj-admin-item{border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;background:#fff;display:flex;gap:12px;align-items:flex-start}
+.jj-admin-item.next{border-color:var(--emas);background:var(--emas-pale)}
+.jj-admin-date{width:56px;text-align:center;flex-shrink:0;background:var(--hijau-pale);border-radius:10px;padding:8px 4px}
+.jj-admin-item.next .jj-admin-date{background:var(--emas);color:#fff}
+.jj-admin-date .dd{font-size:18px;font-weight:800;line-height:1;color:var(--hijau)}
+.jj-admin-item.next .jj-admin-date .dd{color:#fff}
+.jj-admin-date .mm{font-size:10px;font-weight:700;text-transform:uppercase;margin-top:2px;color:var(--hijau)}
+.jj-admin-item.next .jj-admin-date .mm{color:#fff}
+.jj-admin-body{flex:1;min-width:0}
+.jj-admin-khatib{font-size:13.5px;font-weight:700;color:var(--text)}
+.jj-admin-meta{font-size:11.5px;color:var(--text3);margin-top:3px;line-height:1.6}
+.jj-admin-actions{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.toggle-switch{position:relative;display:inline-block;width:46px;height:26px;flex-shrink:0}
+.toggle-switch input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;cursor:pointer;inset:0;background:#ccc;border-radius:26px;transition:.2s}
+.toggle-slider:before{content:"";position:absolute;height:20px;width:20px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.2s}
+.toggle-switch input:checked + .toggle-slider{background:var(--hijau)}
+.toggle-switch input:checked + .toggle-slider:before{transform:translateX(20px)}
+.qb-admin-item{border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:10px;background:#fff}
+.qb-admin-head{display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer}
+.qb-admin-title{font-size:13.5px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px}
+.qb-status-badge{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;border-radius:20px;padding:3px 10px}
+.qb-status-badge.terkumpul{background:var(--emas-pale);color:#7B5800}
+.qb-status-badge.disembelih{background:#FFE8D6;color:#B5540A}
+.qb-status-badge.disalurkan{background:var(--hijau-pale);color:var(--hijau)}
+.qb-peserta-list{margin-top:0;padding-top:0;border-top:none;display:none;flex-direction:column;gap:6px;max-height:0;overflow:hidden}
+.qb-admin-item.open-peserta .qb-peserta-list{display:flex;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);max-height:none}
+.qb-admin-head{position:relative}
+.qb-peserta-row{font-size:12px;color:var(--text2);display:flex;gap:6px}
+.qb-peserta-row b{color:var(--text);font-weight:700}
+.qb-admin-actions{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.qb-peserta-input-row{display:flex;gap:8px;margin-bottom:8px;align-items:center}
+.qb-peserta-input-row input{flex:1}
+.pnj-admin-item{border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:10px;background:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .month-block{margin-bottom:20px}
 .month-head{font-size:14px;font-weight:700;color:var(--hijau);padding:10px 0 8px;border-bottom:2px solid var(--emas);margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 
@@ -372,6 +414,15 @@ textarea{resize:vertical;min-height:60px}
     <div class="nav-section">Publikasi</div>
     <div class="nav-item" onclick="goPage('jamaah')" id="nav-jamaah">
       <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18 11v2h4v-2h-4zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61zM20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4zM4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9H4zm11.5 3c0-1.33-.58-2.53-1.5-3.35v6.69c.92-.81 1.5-2.01 1.5-3.34z"/></svg></span><span class="nav-label">Laporan Jamaah</span>
+    </div>
+    <div class="nav-item" onclick="goPage('pengumuman')" id="nav-pengumuman">
+      <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></span><span class="nav-label">Pengumuman</span>
+    </div>
+    <div class="nav-item" onclick="goPage('jadwaljumat')" id="nav-jadwaljumat">
+      <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 006.03-15.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg></span><span class="nav-label">Jadwal Jum'at</span>
+    </div>
+    <div class="nav-item" onclick="goPage('qurban')" id="nav-qurban">
+      <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.5 3 6v3c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-3c1.8-1.5 3-3.5 3-6 0-4-3-7-7-7zm-3 6c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1zm7 0c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1zm-3 6c-1.1 0-2-.45-2-1h4c0 .55-.9 1-2 1z"/></svg></span><span class="nav-label">Qurban</span>
     </div>
     <div class="nav-section">Pengaturan</div>
     <div class="nav-item" onclick="goPage('identitas')" id="nav-identitas">
@@ -687,6 +738,39 @@ textarea{resize:vertical;min-height:60px}
       </div>
     </div>
 
+    <!-- Foto Hero (Halaman Jamaah) -->
+    <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px">
+      <div style="font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px">Foto Hero (Halaman Jamaah)</div>
+      <div style="display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap">
+        <!-- Preview -->
+        <div id="hero-preview-wrap" style="flex-shrink:0;width:90px;height:90px;border:2px dashed var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--krem);overflow:hidden;cursor:pointer" onclick="document.getElementById('hero-file-input').click()" title="Klik untuk upload foto hero">
+          <img id="hero-preview-img" src="" alt="" style="display:none;width:100%;height:100%;object-fit:contain">
+          <div id="hero-preview-placeholder" style="display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text3)">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            <span style="font-size:10px;text-align:center">Klik upload</span>
+          </div>
+        </div>
+        <div style="flex:1;min-width:200px">
+          <div style="font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:12px">
+            Upload foto/gambar masjid (PNG/JPG, disarankan transparan, maks. 500KB).<br>
+            Foto ini <b>terpisah dari Logo</b> — dipakai khusus untuk gambar di kartu hijau halaman <b>Home Laporan Jamaah</b>. Kalau belum diupload, akan tampil siluet masjid dummy.
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn btn-primary btn-sm" onclick="document.getElementById('hero-file-input').click()">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
+              Upload Foto
+            </button>
+            <button class="btn btn-sm btn-danger" id="hero-hapus-btn" style="display:none" onclick="hapusHeroFoto()">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+              Hapus Foto
+            </button>
+          </div>
+          <input type="file" id="hero-file-input" accept="image/*" style="display:none" onchange="onHeroFileChange(event)">
+          <div id="hero-status" style="font-size:11px;margin-top:8px;color:var(--text3)"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Nama & Alamat -->
     <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px">
       <div style="font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px">Nama & Alamat</div>
@@ -867,7 +951,7 @@ textarea{resize:vertical;min-height:60px}
           <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
           Pulihkan dari File Backup
         </button>
-        <input type="file" id="backup-file-input" accept="application/json" style="display:none" onchange="backupRestore(event)">
+        <input type="file" id="backup-file-input" accept="application/json,.json" style="display:none" onchange="backupRestore(event)">
       </div>
       <div id="backup-status" style="font-size:11px;color:var(--text3);margin-top:10px"></div>
     </div>
@@ -966,6 +1050,90 @@ textarea{resize:vertical;min-height:60px}
   </div>
 </div>
 
+<!-- ══════ PAGE: PENGUMUMAN ══════ -->
+<div class="page" id="page-pengumuman">
+  <div class="section-header">
+    <div class="section-title"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg> Pengumuman</div>
+    <div class="section-actions">
+      <button class="btn btn-primary" onclick="openModalPengumuman()"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg> Tambah Pengumuman</button>
+    </div>
+  </div>
+  <div style="max-width:760px">
+    <div style="background:var(--emas-pale);border:1px solid var(--emas);border-radius:10px;padding:14px 18px;margin-bottom:16px;display:flex;gap:12px;align-items:flex-start">
+      <div style="flex-shrink:0;display:flex;align-items:center;color:rgba(255,255,255,0.9)"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C8.69 2 6 4.69 6 8c0 2.22 1.21 4.16 3 5.19V15c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1.81C16.79 12.16 18 10.22 18 8c0-3.31-2.69-6-6-6zm2 12h-4v-1h4v1zm0-3.15l-.57.34C12.59 11.71 12 12.32 12 13h0c-.54 0-.98-.44-1-.98l-.57-.34A3.975 3.975 0 018 8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.43-.76 2.69-2 3.35z"/></svg></div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--emas);margin-bottom:4px">Cara pakai</div>
+        <div style="font-size:12px;color:#7B5800;line-height:1.7">
+          1. Tambah pengumuman di sini — bisa upload <b>PDF</b>, upload <b>gambar/poster</b>, atau <b>tulis manual</b><br>
+          2. Buka menu <b>Laporan untuk Jamaah</b>, klik <b>Generate data.js</b> lagi (pengumuman otomatis ikut disertakan)<br>
+          3. Upload ulang <b>data.js</b> ke GitHub — halaman jamaah otomatis menampilkan pengumuman terbaru
+        </div>
+      </div>
+    </div>
+    <div id="peng-size-warning" style="display:none;background:var(--red-pale, #FBDADA);border:1px solid #F5C6C6;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:var(--red);line-height:1.6"></div>
+    <div id="pengumuman-admin-list"></div>
+  </div>
+</div>
+
+<!-- ══════ PAGE: JADWAL SHOLAT JUM'AT ══════ -->
+<div class="page" id="page-jadwaljumat">
+  <div class="section-header">
+    <div class="section-title"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 006.03-15.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg> Jadwal Sholat Jum'at</div>
+    <div class="section-actions">
+      <button class="btn btn-primary" onclick="openModalJadwalJumat()"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg> Tambah Jadwal</button>
+    </div>
+  </div>
+  <div style="max-width:760px">
+    <div style="background:var(--hijau-pale);border:1px solid var(--hijau-light);border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:12px;color:var(--hijau);line-height:1.7">
+      Isi jadwal Khatib/Imam untuk tiap hari Jumat di sini. Setelah menambah/edit, buka menu <b>Laporan untuk Jamaah</b> → <b>Generate data.js</b> lagi supaya jadwal terbaru ikut tersinkron ke halaman jamaah.
+    </div>
+    <div id="jadwaljumat-admin-list"></div>
+  </div>
+</div>
+
+<!-- ══════ PAGE: QURBAN ══════ -->
+<div class="page" id="page-qurban">
+  <div class="section-header">
+    <div class="section-title"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.5 3 6v3c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-3c1.8-1.5 3-3.5 3-6 0-4-3-7-7-7zm-3 6c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1zm7 0c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1zm-3 6c-1.1 0-2-.45-2-1h4c0 .55-.9 1-2 1z"/></svg> Qurban</div>
+  </div>
+  <div style="max-width:760px">
+
+    <!-- Toggle Aktif -->
+    <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text)">Tampilkan menu Qurban di Halaman Jamaah</div>
+        <div style="font-size:11.5px;color:var(--text3);margin-top:3px">Kalau lagi tidak musim Qurban, matikan saja — data tidak akan hilang, cuma disembunyikan dari jamaah.</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="qurban-aktif-toggle" onchange="toggleQurbanAktif()">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <!-- Hewan Qurban -->
+    <div class="section-header" style="margin-top:22px">
+      <div class="section-title" style="font-size:14px">🐄 Hewan Qurban</div>
+      <div class="section-actions">
+        <button class="btn btn-primary btn-sm" onclick="openModalQurban()"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg> Tambah Hewan</button>
+      </div>
+    </div>
+    <div id="qurban-admin-list" style="margin-bottom:24px"></div>
+
+    <!-- Penyaluran -->
+    <div class="section-header">
+      <div class="section-title" style="font-size:14px">📦 Penyaluran / Distribusi</div>
+      <div class="section-actions">
+        <button class="btn btn-primary btn-sm" onclick="openModalPenyaluran()"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg> Tambah Penyaluran</button>
+      </div>
+    </div>
+    <div id="penyaluran-admin-list"></div>
+
+    <div style="background:var(--hijau-pale);border:1px solid var(--hijau-light);border-radius:10px;padding:12px 16px;margin-top:18px;font-size:12px;color:var(--hijau);line-height:1.7">
+      Setelah menambah/edit data Qurban, buka menu <b>Laporan untuk Jamaah</b> → <b>Generate data.js</b> lagi supaya data terbaru ikut tersinkron ke halaman jamaah.
+    </div>
+  </div>
+</div>
+
 
 </div><!-- end content -->
 </div><!-- end main -->
@@ -1036,6 +1204,110 @@ textarea{resize:vertical;min-height:60px}
     <div class="modal-actions">
       <button class="btn" onclick="closeModalCatatanList()">Tutup</button>
       <button class="btn btn-primary" onclick="openModalCatatanFromList()">+ Tambah Catatan</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Pengumuman (tambah/edit) -->
+<div class="modal-overlay" id="modal-pengumuman">
+  <div class="modal">
+    <div class="modal-title" id="modal-pengumuman-title"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg> Tambah Pengumuman</div>
+    <div class="form-grid">
+      <div class="fg form-full"><label>Jenis Pengumuman *</label>
+        <select class="fi" id="pg-tipe" onchange="pengumumanTipeChange()">
+          <option value="pdf">📄 Upload PDF</option>
+          <option value="gambar">🖼️ Upload Gambar / Poster</option>
+          <option value="teks">📝 Tulis Manual (teks saja)</option>
+        </select>
+      </div>
+      <div class="fg form-full"><label>Judul *</label><input type="text" id="pg-judul" placeholder="Cth: Pengumuman Jadwal Kajian Ramadhan"></div>
+      <div class="fg"><label>Tanggal (opsional)</label><input type="date" id="pg-tanggal"></div>
+      <div class="fg form-full" id="pg-row-file">
+        <label id="pg-file-label">File PDF *</label>
+        <input type="file" id="pg-file" accept="application/pdf" onchange="onPengumumanFileChange(event)">
+        <div id="pg-file-info" style="font-size:11px;color:var(--text3);margin-top:6px"></div>
+      </div>
+      <div class="fg form-full" id="pg-row-keterangan">
+        <label>Keterangan singkat (opsional)</label>
+        <input type="text" id="pg-keterangan" placeholder="Cth: Berlaku mulai Senin depan">
+      </div>
+      <div class="fg form-full" id="pg-row-isi" style="display:none">
+        <label>Isi Pengumuman *</label>
+        <textarea id="pg-isi" rows="6" placeholder="Tulis isi pengumuman di sini..."></textarea>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModalPengumuman()">Batal</button>
+      <button class="btn btn-primary" onclick="savePengumuman()" id="btn-save-pengumuman">Simpan</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Jadwal Sholat Jum'at (tambah/edit) -->
+<div class="modal-overlay" id="modal-jadwaljumat">
+  <div class="modal">
+    <div class="modal-title" id="modal-jadwaljumat-title"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 006.03-15.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg> Tambah Jadwal Jum'at</div>
+    <div class="form-grid">
+      <div class="fg"><label>Tanggal Jumat *</label><input type="date" id="jj-tanggal"></div>
+      <div class="fg"><label>Waktu (opsional)</label><input type="text" id="jj-waktu" placeholder="Cth: 12.00 WIB"></div>
+      <div class="fg form-full"><label>Nama Khatib *</label><input type="text" id="jj-khatib" placeholder="Cth: Ust. H. Ahmad"></div>
+      <div class="fg"><label>Nama Imam (opsional)</label><input type="text" id="jj-imam" placeholder="Cth: H. Mohammad Umar"></div>
+      <div class="fg"><label>Muadzin (opsional)</label><input type="text" id="jj-muadzin" placeholder="Cth: H. Rochim"></div>
+      <div class="fg form-full"><label>Tema Khutbah (opsional)</label><input type="text" id="jj-tema" placeholder="Cth: Keutamaan Menjaga Silaturahmi"></div>
+      <div class="fg form-full"><label>Catatan (opsional)</label><textarea id="jj-catatan" rows="3" placeholder="Info tambahan, misal perubahan jadwal, dll"></textarea></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModalJadwalJumat()">Batal</button>
+      <button class="btn btn-primary" onclick="saveJadwalJumat()" id="btn-save-jadwaljumat">Simpan</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Qurban (hewan + peserta patungan) -->
+<div class="modal-overlay" id="modal-qurban">
+  <div class="modal modal-lg">
+    <div class="modal-title" id="modal-qurban-title"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.5 3 6v3c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-3c1.8-1.5 3-3.5 3-6 0-4-3-7-7-7z"/></svg> Tambah Hewan Qurban</div>
+    <div class="form-grid">
+      <div class="fg"><label>Jenis Hewan *</label>
+        <select class="fi" id="qb-jenis" onchange="qbUpdateLabelPlaceholder()">
+          <option value="Sapi">🐄 Sapi (maks. 7 peserta)</option>
+          <option value="Kambing">🐐 Kambing (1 peserta)</option>
+          <option value="Domba">🐑 Domba (1 peserta)</option>
+          <option value="Unta">🐫 Unta (maks. 7 peserta)</option>
+        </select>
+      </div>
+      <div class="fg"><label>Label / Nomor *</label><input type="text" id="qb-label" placeholder="Cth: Sapi 1"></div>
+      <div class="fg form-full"><label>Status *</label>
+        <select class="fi" id="qb-status">
+          <option value="terkumpul">Terkumpul</option>
+          <option value="disembelih">Disembelih</option>
+          <option value="disalurkan">Disalurkan</option>
+        </select>
+      </div>
+      <div class="fg form-full">
+        <label>Peserta Patungan *</label>
+        <div id="qb-peserta-rows"></div>
+        <button class="btn btn-sm" type="button" onclick="qbAddPesertaRow()" style="margin-top:4px"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg> Tambah Peserta</button>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModalQurban()">Batal</button>
+      <button class="btn btn-primary" onclick="saveQurban()" id="btn-save-qurban">Simpan</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Penyaluran Qurban -->
+<div class="modal-overlay" id="modal-penyaluran">
+  <div class="modal">
+    <div class="modal-title" id="modal-penyaluran-title"><svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zM18 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Tambah Penyaluran</div>
+    <div class="form-grid">
+      <div class="fg form-full"><label>Disalurkan Ke *</label><input type="text" id="pnj-tujuan" placeholder="Cth: Warga sekitar masjid, Panti Asuhan Yatim, dll"></div>
+      <div class="fg form-full"><label>Keterangan (opsional)</label><input type="text" id="pnj-keterangan" placeholder="Cth: 50 paket daging"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModalPenyaluran()">Batal</button>
+      <button class="btn btn-primary" onclick="savePenyaluran()" id="btn-save-penyaluran">Simpan</button>
     </div>
   </div>
 </div>
@@ -1142,8 +1414,9 @@ textarea{resize:vertical;min-height:60px}
 let MASJID = 'Takmir Masjid Baiturrahman Panjunan';
 let ALAMAT = 'Dsn. Panjuanan, Ds. Tasikmadu, Kec. Paang, Kab. Tuban';
 let LOGO_B64 = null; // base64 string logo, null if not set
+let HERO_B64 = null; // base64 foto hero khusus halaman jamaah (terpisah dari logo), null jika belum diset
 const BULAN_LIST = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
-const SK = {keu:'lkm_keu_v3', inv:'lkm_inv_v1', trxBrg:'lkm_trx_brg_v1', katKeu:'lkm_kat_keu_v1', katBrg:'lkm_kat_brg_v1', ttd:'lkm_ttd_v2', identitas:'lkm_identitas_v1', logo:'lkm_logo_v1', catatan:'lkm_catatan_v1'};
+const SK = {keu:'lkm_keu_v3', inv:'lkm_inv_v1', trxBrg:'lkm_trx_brg_v1', katKeu:'lkm_kat_keu_v1', katBrg:'lkm_kat_brg_v1', ttd:'lkm_ttd_v2', identitas:'lkm_identitas_v1', logo:'lkm_logo_v1', catatan:'lkm_catatan_v1', pengumuman:'lkm_pengumuman_v1', jadwalJumat:'lkm_jadwal_jumat_v1', heroFoto:'lkm_hero_foto_v1', qurban:'lkm_qurban_v1', penyaluranQurban:'lkm_penyaluran_qurban_v1', qurbanAktif:'lkm_qurban_aktif_v1'};
 const DEF_KAT_KEU = ['Infak','Zakat','Shodaqoh','Pembangunan','Operasional','Lain-lain'];
 const DEF_KAT_BRG = ['Perlengkapan Ibadah','Elektronik','Furnitur','Kebersihan','Keamanan','Administrasi','Lain-lain'];
 const DEF_TTD = {
@@ -1156,8 +1429,10 @@ const DEF_TTD = {
   keu:true, inv:false
 };
 
-let keuData=[], invData=[], trxBrgData=[], katKeuData=[], catatanData=[];
-let editKeuId=null, editInvId=null, editTrxId=null, editCatatanId=null;
+let keuData=[], invData=[], trxBrgData=[], katKeuData=[], catatanData=[], pengumumanData=[], jadwalJumatData=[], qurbanData=[], penyaluranQurbanData=[], qurbanAktif=false;
+let editKeuId=null, editInvId=null, editTrxId=null, editCatatanId=null, editPengumumanId=null, editJadwalJumatId=null, editQurbanId=null, editPenyaluranId=null;
+let qurbanPesertaTemp=[]; // {nama, untuk} — daftar peserta sementara di modal Qurban sebelum disimpan
+let pgFileTemp=null; // {dataUri, filename, sizeKB} — file yang baru dipilih di modal Pengumuman, sebelum disimpan
 let catatanListCtx={tahun:null,bulan:null,minggu:null};
 let confirmCb=null;
 let invView='table';
@@ -1172,11 +1447,17 @@ function loadAll(){
   katKeuData=load(SK.katKeu, DEF_KAT_KEU.slice());
   katBrgData=load(SK.katBrg, DEF_KAT_BRG.slice());
   catatanData=load(SK.catatan, []);
+  pengumumanData=load(SK.pengumuman, []);
+  jadwalJumatData=load(SK.jadwalJumat, []);
+  qurbanData=load(SK.qurban, []);
+  penyaluranQurbanData=load(SK.penyaluranQurban, []);
+  qurbanAktif=localStorage.getItem(SK.qurbanAktif)==='1';
   // load Identitas
   try {
     const idRaw=localStorage.getItem(SK.identitas);
     if(idRaw){const id=JSON.parse(idRaw);if(id.nama)MASJID=id.nama;if(id.alamat)ALAMAT=id.alamat;}
     LOGO_B64=localStorage.getItem(SK.logo)||null;
+    HERO_B64=localStorage.getItem(SK.heroFoto)||null;
   } catch(e){}
   applyIdentitasSidebar();
   // load TTD — pastikan bentuknya object bukan array
@@ -1195,11 +1476,402 @@ function saveInvData(){save(SK.inv,invData)}
 function saveTrxData(){save(SK.trxBrg,trxBrgData)}
 function saveKatData(){save(SK.katKeu,katKeuData)}
 function saveCatatanData(){save(SK.catatan,catatanData)}
+function savePengumumanData(){
+  try{ localStorage.setItem(SK.pengumuman, JSON.stringify(pengumumanData)); return true; }
+  catch(e){ showToast('Gagal menyimpan — penyimpanan browser penuh. Hapus pengumuman lama atau pakai PDF lebih kecil.'); return false; }
+}
+function saveJadwalJumatData(){ save(SK.jadwalJumat, jadwalJumatData); }
+
+/* ── Pengumuman: PDF / Gambar / Teks manual ── */
+function pengumumanTipeChange(){
+  const tipe=document.getElementById('pg-tipe').value;
+  const rowFile=document.getElementById('pg-row-file');
+  const rowKet=document.getElementById('pg-row-keterangan');
+  const rowIsi=document.getElementById('pg-row-isi');
+  const fileInput=document.getElementById('pg-file');
+  const fileLabel=document.getElementById('pg-file-label');
+  if(tipe==='teks'){
+    rowFile.style.display='none'; rowKet.style.display='none'; rowIsi.style.display='block';
+  } else {
+    rowFile.style.display='block'; rowKet.style.display='block'; rowIsi.style.display='none';
+    if(tipe==='pdf'){ fileInput.accept='application/pdf'; fileLabel.textContent='File PDF *'; }
+    else { fileInput.accept='image/*'; fileLabel.textContent='File Gambar (JPG/PNG) *'; }
+  }
+}
+function onPengumumanFileChange(e){
+  const file=e.target.files[0];
+  const info=document.getElementById('pg-file-info');
+  if(!file){ pgFileTemp=null; info.textContent=''; return; }
+  const tipe=document.getElementById('pg-tipe').value;
+  const maxMB = tipe==='pdf' ? 5 : 3;
+  if(file.size > maxMB*1024*1024){
+    showToast(`Ukuran file terlalu besar (maks ${maxMB}MB). Kompres dulu ya.`);
+    e.target.value=''; pgFileTemp=null; info.textContent=''; return;
+  }
+  const reader=new FileReader();
+  reader.onload=function(ev){
+    pgFileTemp={dataUri:ev.target.result, filename:file.name, sizeKB:Math.round(file.size/1024)};
+    info.innerHTML=`✓ <b>${file.name}</b> (${pgFileTemp.sizeKB} KB) siap disimpan`;
+  };
+  reader.readAsDataURL(file);
+}
+function openModalPengumuman(prefillId){
+  pgFileTemp=null;
+  document.getElementById('pg-file').value='';
+  document.getElementById('pg-file-info').textContent='';
+  const editing = typeof prefillId==='number';
+  editPengumumanId = editing ? prefillId : null;
+  document.getElementById('modal-pengumuman-title').innerHTML = editing
+    ? '<svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg> Edit Pengumuman'
+    : '<svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg> Tambah Pengumuman';
+  document.getElementById('btn-save-pengumuman').textContent = editing ? 'Perbarui' : 'Simpan';
+  if(editing){
+    const p=pengumumanData.find(x=>x.id===prefillId); if(!p) return;
+    document.getElementById('pg-tipe').value=p.tipe;
+    document.getElementById('pg-judul').value=p.judul||'';
+    document.getElementById('pg-tanggal').value=p.tanggal||'';
+    document.getElementById('pg-keterangan').value=p.keterangan||'';
+    document.getElementById('pg-isi').value=p.isi||'';
+    if(p.fileBase64) document.getElementById('pg-file-info').innerHTML=`📎 File saat ini: <b>${p.filename||'file'}</b> ${p.sizeKB?`(${p.sizeKB} KB)`:''} — biarkan kosong kalau tidak ingin ganti file`;
+  } else {
+    document.getElementById('pg-tipe').value='pdf';
+    document.getElementById('pg-judul').value='';
+    document.getElementById('pg-tanggal').value='';
+    document.getElementById('pg-keterangan').value='';
+    document.getElementById('pg-isi').value='';
+  }
+  pengumumanTipeChange();
+  document.getElementById('modal-pengumuman').classList.add('open');
+}
+function closeModalPengumuman(){document.getElementById('modal-pengumuman').classList.remove('open');}
+function savePengumuman(){
+  const tipe=document.getElementById('pg-tipe').value;
+  const judul=document.getElementById('pg-judul').value.trim();
+  const tanggal=document.getElementById('pg-tanggal').value;
+  const keterangan=document.getElementById('pg-keterangan').value.trim();
+  const isi=document.getElementById('pg-isi').value.trim();
+  if(!judul){showToast('Judul wajib diisi!');return;}
+  if(tipe==='teks' && !isi){showToast('Isi pengumuman wajib diisi!');return;}
+
+  const existing = editPengumumanId ? pengumumanData.find(x=>x.id===editPengumumanId) : null;
+  if((tipe==='pdf'||tipe==='gambar') && !pgFileTemp && !(existing && existing.fileBase64)){
+    showToast(tipe==='pdf' ? 'File PDF wajib diupload!' : 'File gambar wajib diupload!');return;
+  }
+
+  const row={
+    id: editPengumumanId || Date.now(),
+    tipe, judul, tanggal, keterangan,
+    isi: tipe==='teks' ? isi : '',
+    fileBase64: (tipe==='pdf'||tipe==='gambar') ? (pgFileTemp ? pgFileTemp.dataUri : (existing?existing.fileBase64:'')) : '',
+    filename: (tipe==='pdf'||tipe==='gambar') ? (pgFileTemp ? pgFileTemp.filename : (existing?existing.filename:'')) : '',
+    sizeKB: (tipe==='pdf'||tipe==='gambar') ? (pgFileTemp ? pgFileTemp.sizeKB : (existing?existing.sizeKB:0)) : 0,
+    createdAt: existing ? existing.createdAt : new Date().toISOString()
+  };
+  if(existing){ const i=pengumumanData.findIndex(x=>x.id===editPengumumanId); pengumumanData[i]=row; }
+  else pengumumanData.push(row);
+
+  if(!savePengumumanData()) return;
+  closeModalPengumuman();
+  renderPengumumanAdminList();
+  showToast(existing?'Pengumuman diperbarui ✓':'Pengumuman ditambahkan ✓');
+}
+function pengumumanOpenFile(dataUri){
+  if(!dataUri) return;
+  window.open(dataUri,'_blank');
+}
+function pengumumanTotalSizeKB(){
+  return pengumumanData.reduce((s,p)=>s+(p.sizeKB||0),0);
+}
+function renderPengumumanAdminList(){
+  const wrap=document.getElementById('pengumuman-admin-list');
+  const warnEl=document.getElementById('peng-size-warning');
+  if(!wrap) return;
+  const totalKB=pengumumanTotalSizeKB();
+  if(totalKB > 700){
+    warnEl.style.display='block';
+    warnEl.innerHTML=`⚠️ Total ukuran file pengumuman sekitar <b>${(totalKB/1024).toFixed(1)} MB</b>. Semakin besar, file <b>data.js</b> juga makin besar dan makin berat dimuat jamaah. Sebaiknya kompres PDF/gambar atau hapus pengumuman lama yang sudah tidak relevan.`;
+  } else { warnEl.style.display='none'; }
+
+  if(!pengumumanData.length){
+    wrap.innerHTML='<div class="empty-state"><div class="empty-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div>Belum ada pengumuman. Klik "Tambah Pengumuman" untuk mulai.</div>';
+    return;
+  }
+  const sorted=[...pengumumanData].sort((a,b)=>(b.tanggal||'').localeCompare(a.tanggal||'')||b.id-a.id);
+  const iconMap={pdf:'📄',gambar:'🖼️',teks:'📝'};
+  wrap.innerHTML=sorted.map(p=>{
+    let bodyExtra='';
+    if(p.tipe==='teks'){
+      bodyExtra=`<div class="peng-admin-snippet">${(p.isi||'').slice(0,220)}${(p.isi||'').length>220?'…':''}</div>`;
+    } else if(p.tipe==='gambar' && p.fileBase64){
+      bodyExtra=`<img class="peng-admin-thumb" src="${p.fileBase64}" alt="">`;
+    } else if(p.tipe==='pdf'){
+      bodyExtra=`<div class="peng-admin-meta">${p.filename||''} ${p.sizeKB?`(${p.sizeKB} KB)`:''}</div>`;
+    }
+    if(p.keterangan) bodyExtra+=`<div class="peng-admin-snippet">${p.keterangan}</div>`;
+    return `<div class="peng-admin-item">
+      <div class="peng-admin-icon">${iconMap[p.tipe]||'📢'}</div>
+      <div class="peng-admin-body">
+        <div class="peng-admin-judul">${p.judul}</div>
+        <div class="peng-admin-meta">${p.tanggal?fmtTgl(p.tanggal):'Tanpa tanggal'}</div>
+        ${bodyExtra}
+        <div class="peng-admin-actions">
+          ${(p.tipe==='pdf'||p.tipe==='gambar')&&p.fileBase64?`<button class="btn btn-sm" onclick="pengumumanOpenFile('${p.fileBase64}')"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> Lihat</button>`:''}
+          <button class="btn btn-sm" onclick="openModalPengumuman(${p.id})"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg> Edit</button>
+          <button class="btn btn-sm btn-danger" onclick="askDelete('pengumuman',${p.id},'${(p.judul||'').replace(/'/g,"\\'")}')"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg> Hapus</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ── Jadwal Sholat Jum'at ── */
+function openModalJadwalJumat(prefillId){
+  const editing = typeof prefillId==='number';
+  editJadwalJumatId = editing ? prefillId : null;
+  document.getElementById('modal-jadwaljumat-title').innerHTML = editing
+    ? '<svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg> Edit Jadwal Jum\'at'
+    : '<svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 006.03-15.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg> Tambah Jadwal Jum\'at';
+  document.getElementById('btn-save-jadwaljumat').textContent = editing ? 'Perbarui' : 'Simpan';
+  if(editing){
+    const j=jadwalJumatData.find(x=>x.id===prefillId); if(!j) return;
+    document.getElementById('jj-tanggal').value=j.tanggal||'';
+    document.getElementById('jj-waktu').value=j.waktu||'';
+    document.getElementById('jj-khatib').value=j.khatib||'';
+    document.getElementById('jj-imam').value=j.imam||'';
+    document.getElementById('jj-muadzin').value=j.muadzin||'';
+    document.getElementById('jj-tema').value=j.tema||'';
+    document.getElementById('jj-catatan').value=j.catatan||'';
+  } else {
+    ['jj-tanggal','jj-waktu','jj-khatib','jj-imam','jj-muadzin','jj-tema','jj-catatan'].forEach(id=>document.getElementById(id).value='');
+    // default: Jumat terdekat ke depan
+    const d=new Date(); const diff=(5-d.getDay()+7)%7 || 7; // 5=Jumat; kalau hari ini Jumat, arahkan ke Jumat depan
+    const next=new Date(d); next.setDate(d.getDate()+((d.getDay()===5)?0:diff));
+    document.getElementById('jj-tanggal').value=next.toISOString().slice(0,10);
+  }
+  document.getElementById('modal-jadwaljumat').classList.add('open');
+}
+function closeModalJadwalJumat(){document.getElementById('modal-jadwaljumat').classList.remove('open');}
+function saveJadwalJumat(){
+  const tanggal=document.getElementById('jj-tanggal').value;
+  const waktu=document.getElementById('jj-waktu').value.trim();
+  const khatib=document.getElementById('jj-khatib').value.trim();
+  const imam=document.getElementById('jj-imam').value.trim();
+  const muadzin=document.getElementById('jj-muadzin').value.trim();
+  const tema=document.getElementById('jj-tema').value.trim();
+  const catatan=document.getElementById('jj-catatan').value.trim();
+  if(!tanggal){showToast('Tanggal Jumat wajib diisi!');return;}
+  if(!khatib){showToast('Nama Khatib wajib diisi!');return;}
+  const row={id:editJadwalJumatId||Date.now(), tanggal, waktu, khatib, imam, muadzin, tema, catatan};
+  if(editJadwalJumatId){ const i=jadwalJumatData.findIndex(x=>x.id===editJadwalJumatId); jadwalJumatData[i]=row; }
+  else jadwalJumatData.push(row);
+  saveJadwalJumatData();
+  closeModalJadwalJumat();
+  renderJadwalJumatAdminList();
+  showToast(editJadwalJumatId?'Jadwal diperbarui ✓':'Jadwal ditambahkan ✓');
+}
+function jjNextUpcomingId(){
+  const todayStr=new Date().toISOString().slice(0,10);
+  const upcoming=jadwalJumatData.filter(j=>j.tanggal>=todayStr).sort((a,b)=>a.tanggal.localeCompare(b.tanggal));
+  return upcoming.length?upcoming[0].id:null;
+}
+function renderJadwalJumatAdminList(){
+  const wrap=document.getElementById('jadwaljumat-admin-list');
+  if(!wrap) return;
+  if(!jadwalJumatData.length){
+    wrap.innerHTML='<div class="empty-state"><div class="empty-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 006.03-15.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg></div>Belum ada jadwal. Klik "Tambah Jadwal" untuk mulai.</div>';
+    return;
+  }
+  const nextId=jjNextUpcomingId();
+  const sorted=[...jadwalJumatData].sort((a,b)=>b.tanggal.localeCompare(a.tanggal));
+  const bulanSingkat=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+  wrap.innerHTML=sorted.map(j=>{
+    const [y,m,dd]=j.tanggal.split('-').map(Number);
+    const isNext=j.id===nextId;
+    const metaParts=[];
+    if(j.waktu) metaParts.push('🕐 '+j.waktu);
+    if(j.imam) metaParts.push('Imam: '+j.imam);
+    if(j.muadzin) metaParts.push('Muadzin: '+j.muadzin);
+    return `<div class="jj-admin-item${isNext?' next':''}">
+      <div class="jj-admin-date"><div class="dd">${String(dd).padStart(2,'0')}</div><div class="mm">${bulanSingkat[m-1]}</div></div>
+      <div class="jj-admin-body">
+        ${isNext?'<div style="font-size:10px;font-weight:800;color:var(--emas);margin-bottom:3px;text-transform:uppercase;letter-spacing:.4px">Jumat Terdekat</div>':''}
+        <div class="jj-admin-khatib">Khatib: ${j.khatib}</div>
+        ${j.tema?`<div class="jj-admin-meta">Tema: ${j.tema}</div>`:''}
+        ${metaParts.length?`<div class="jj-admin-meta">${metaParts.join(' &nbsp;•&nbsp; ')}</div>`:''}
+        ${j.catatan?`<div class="jj-admin-meta">📝 ${j.catatan}</div>`:''}
+        <div class="jj-admin-actions">
+          <button class="btn btn-sm" onclick="openModalJadwalJumat(${j.id})"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg> Edit</button>
+          <button class="btn btn-sm btn-danger" onclick="askDelete('jadwaljumat',${j.id},'jadwal Jumat ${String(dd).padStart(2,'0')} ${bulanSingkat[m-1]}')"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg> Hapus</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ══════ QURBAN ══════ */
+function qurbanPageInit(){
+  document.getElementById('qurban-aktif-toggle').checked = qurbanAktif;
+  renderQurbanAdminList();
+  renderPenyaluranAdminList();
+}
+function toggleQurbanAktif(){
+  qurbanAktif=document.getElementById('qurban-aktif-toggle').checked;
+  localStorage.setItem(SK.qurbanAktif, qurbanAktif?'1':'0');
+  if(typeof markDirty==='function')markDirty();
+  showToast(qurbanAktif?'Menu Qurban diaktifkan di halaman Jamaah ✓':'Menu Qurban disembunyikan dari halaman Jamaah');
+}
+function qbUpdateLabelPlaceholder(){
+  const jenis=document.getElementById('qb-jenis').value;
+  const labelInput=document.getElementById('qb-label');
+  if(!labelInput.value || /^(Sapi|Kambing|Domba|Unta) \d*$/.test(labelInput.value)){
+    const count=qurbanData.filter(q=>q.jenis===jenis).length+1;
+    labelInput.value=jenis+' '+count;
+  }
+}
+function qbAddPesertaRow(nama,untuk){
+  const wrap=document.getElementById('qb-peserta-rows');
+  const idx=wrap.children.length;
+  const row=document.createElement('div');
+  row.className='qb-peserta-input-row';
+  row.innerHTML=`<span style="font-size:11px;color:var(--text3);width:16px;flex-shrink:0">${idx+1}.</span>
+    <input type="text" class="qb-p-nama" placeholder="Nama pequrban" value="${nama?nama.replace(/"/g,'&quot;'):''}">
+    <input type="text" class="qb-p-untuk" placeholder="Diniatkan untuk (opsional)" value="${untuk?untuk.replace(/"/g,'&quot;'):''}">
+    <button type="button" class="btn btn-sm btn-danger" onclick="this.parentElement.remove();qbRenumberRows()" style="flex-shrink:0;padding:6px 9px"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>`;
+  wrap.appendChild(row);
+}
+function qbRenumberRows(){
+  const wrap=document.getElementById('qb-peserta-rows');
+  [...wrap.children].forEach((row,i)=>{row.querySelector('span').textContent=(i+1)+'.';});
+}
+function openModalQurban(prefillId){
+  const editing = typeof prefillId==='number';
+  editQurbanId = editing ? prefillId : null;
+  document.getElementById('modal-qurban-title').innerHTML = editing
+    ? '<svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg> Edit Hewan Qurban'
+    : '<svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.5 3 6v3c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-3c1.8-1.5 3-3.5 3-6 0-4-3-7-7-7z"/></svg> Tambah Hewan Qurban';
+  document.getElementById('btn-save-qurban').textContent = editing ? 'Perbarui' : 'Simpan';
+  document.getElementById('qb-peserta-rows').innerHTML='';
+  if(editing){
+    const q=qurbanData.find(x=>x.id===prefillId); if(!q) return;
+    document.getElementById('qb-jenis').value=q.jenis;
+    document.getElementById('qb-label').value=q.label;
+    document.getElementById('qb-status').value=q.status;
+    (q.peserta||[]).forEach(p=>qbAddPesertaRow(p.nama,p.untuk));
+    if(!q.peserta || !q.peserta.length) qbAddPesertaRow();
+  } else {
+    document.getElementById('qb-jenis').value='Sapi';
+    document.getElementById('qb-status').value='terkumpul';
+    qbUpdateLabelPlaceholder();
+    qbAddPesertaRow();
+  }
+  document.getElementById('modal-qurban').classList.add('open');
+}
+function closeModalQurban(){document.getElementById('modal-qurban').classList.remove('open');}
+function saveQurban(){
+  const jenis=document.getElementById('qb-jenis').value;
+  const label=document.getElementById('qb-label').value.trim();
+  const status=document.getElementById('qb-status').value;
+  if(!label){showToast('Label/nomor hewan wajib diisi!');return;}
+  const rows=[...document.getElementById('qb-peserta-rows').children];
+  const peserta=rows.map(row=>({
+    nama: row.querySelector('.qb-p-nama').value.trim(),
+    untuk: row.querySelector('.qb-p-untuk').value.trim()
+  })).filter(p=>p.nama);
+  if(!peserta.length){showToast('Minimal 1 peserta dengan nama wajib diisi!');return;}
+  const maxPeserta=(jenis==='Sapi'||jenis==='Unta')?7:1;
+  if(peserta.length>maxPeserta){showToast(`${jenis} maksimal ${maxPeserta} peserta patungan!`);return;}
+  const row={id:editQurbanId||Date.now(), jenis, label, status, peserta, createdAt:editQurbanId?(qurbanData.find(x=>x.id===editQurbanId)?.createdAt||new Date().toISOString()):new Date().toISOString()};
+  if(editQurbanId){ const i=qurbanData.findIndex(x=>x.id===editQurbanId); qurbanData[i]=row; }
+  else qurbanData.push(row);
+  save(SK.qurban, qurbanData);
+  closeModalQurban();
+  renderQurbanAdminList();
+  showToast(editQurbanId?'Hewan Qurban diperbarui ✓':'Hewan Qurban ditambahkan ✓');
+}
+function qbToggleExpand(cardId){
+  const el=document.getElementById(cardId);
+  if(el) el.classList.toggle('open-peserta');
+}
+function renderQurbanAdminList(){
+  const wrap=document.getElementById('qurban-admin-list');
+  if(!wrap) return;
+  if(!qurbanData.length){
+    wrap.innerHTML='<div class="empty-state"><div class="empty-icon">🐄</div>Belum ada hewan Qurban. Klik "Tambah Hewan" untuk mulai.</div>';
+    return;
+  }
+  const statusLabel={terkumpul:'Terkumpul',disembelih:'Disembelih',disalurkan:'Disalurkan'};
+  const jenisIcon={Sapi:'🐄',Kambing:'🐐',Domba:'🐑',Unta:'🐫'};
+  const sorted=[...qurbanData].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
+  wrap.innerHTML=sorted.map(q=>{
+    const cardId='qb-card-'+q.id;
+    return `<div class="qb-admin-item" id="${cardId}">
+      <div class="qb-admin-head" onclick="qbToggleExpand('${cardId}')">
+        <div class="qb-admin-title">${jenisIcon[q.jenis]||'🐾'} ${q.label} <span style="font-weight:400;color:var(--text3);font-size:11.5px">(${q.peserta.length} peserta)</span></div>
+        <span class="qb-status-badge ${q.status}">${statusLabel[q.status]||q.status}</span>
+      </div>
+      <div class="qb-peserta-list">
+        ${q.peserta.map((p,i)=>`<div class="qb-peserta-row">${i+1}. <b>${p.nama}</b>${p.untuk?' — untuk '+p.untuk:''}</div>`).join('')}
+      </div>
+      <div class="qb-admin-actions">
+        <button class="btn btn-sm" onclick="openModalQurban(${q.id})"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg> Edit</button>
+        <button class="btn btn-sm btn-danger" onclick="askDelete('qurban',${q.id},'${q.label}')"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg> Hapus</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ── Penyaluran Qurban ── */
+function openModalPenyaluran(prefillId){
+  const editing = typeof prefillId==='number';
+  editPenyaluranId = editing ? prefillId : null;
+  document.getElementById('modal-penyaluran-title').innerHTML = editing ? 'Edit Penyaluran' : 'Tambah Penyaluran';
+  document.getElementById('btn-save-penyaluran').textContent = editing ? 'Perbarui' : 'Simpan';
+  if(editing){
+    const p=penyaluranQurbanData.find(x=>x.id===prefillId); if(!p) return;
+    document.getElementById('pnj-tujuan').value=p.tujuan||'';
+    document.getElementById('pnj-keterangan').value=p.keterangan||'';
+  } else {
+    document.getElementById('pnj-tujuan').value='';
+    document.getElementById('pnj-keterangan').value='';
+  }
+  document.getElementById('modal-penyaluran').classList.add('open');
+}
+function closeModalPenyaluran(){document.getElementById('modal-penyaluran').classList.remove('open');}
+function savePenyaluran(){
+  const tujuan=document.getElementById('pnj-tujuan').value.trim();
+  const keterangan=document.getElementById('pnj-keterangan').value.trim();
+  if(!tujuan){showToast('Tujuan penyaluran wajib diisi!');return;}
+  const row={id:editPenyaluranId||Date.now(), tujuan, keterangan};
+  if(editPenyaluranId){ const i=penyaluranQurbanData.findIndex(x=>x.id===editPenyaluranId); penyaluranQurbanData[i]=row; }
+  else penyaluranQurbanData.push(row);
+  save(SK.penyaluranQurban, penyaluranQurbanData);
+  closeModalPenyaluran();
+  renderPenyaluranAdminList();
+  showToast(editPenyaluranId?'Penyaluran diperbarui ✓':'Penyaluran ditambahkan ✓');
+}
+function renderPenyaluranAdminList(){
+  const wrap=document.getElementById('penyaluran-admin-list');
+  if(!wrap) return;
+  if(!penyaluranQurbanData.length){
+    wrap.innerHTML='<div class="empty-state"><div class="empty-icon">📦</div>Belum ada data penyaluran.</div>';
+    return;
+  }
+  wrap.innerHTML=penyaluranQurbanData.map(p=>`<div class="pnj-admin-item">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text)">${p.tujuan}</div>
+        ${p.keterangan?`<div style="font-size:11.5px;color:var(--text3);margin-top:2px">${p.keterangan}</div>`:''}
+      </div>
+      <div style="display:flex;gap:6px">
+        <button class="btn btn-sm" onclick="openModalPenyaluran(${p.id})"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg> Edit</button>
+        <button class="btn btn-sm btn-danger" onclick="askDelete('penyaluranQurban',${p.id},'${p.tujuan.replace(/'/g,"\\'")}')"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg> Hapus</button>
+      </div>
+    </div>`).join('');
+}
 
 /* ══════════════════════════════════════════
    FORMATTERS
 ══════════════════════════════════════════ */
-const fmtRp  = n=>'Rp '+Math.round(n||0).toLocaleString('id-ID');
+const fmtRp = n=>'Rp '+Math.round(n||0).toLocaleString('id-ID');
 const fmtNum = n=>Math.round(n||0).toLocaleString('id-ID');
 const fmtTgl = s=>{if(!s)return '';const[y,m,d]=s.split('-');return d+'/'+m+'/'+y};
 const fmtTglLong = s=>{if(!s)return '';const d=new Date(s);return d.toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'})};
@@ -1217,7 +1889,7 @@ function badgeJenis(j){
 /* ══════════════════════════════════════════
    NAVIGATION
 ══════════════════════════════════════════ */
-const PAGE_TITLES={dashboard:'Dashboard',keuangan:'Laporan Keuangan',inventaris:'Inventaris Barang','transaksi-barang':'Barang Masuk / Keluar','kat-kas':'Kategori Kas','kat-barang':'Kategori Barang',ttd:'Tanda Tangan PDF',jamaah:'Laporan untuk Jamaah',identitas:'Identitas Masjid',sync:'Sinkronisasi & Backup'};
+const PAGE_TITLES={dashboard:'Dashboard',keuangan:'Laporan Keuangan',inventaris:'Inventaris Barang','transaksi-barang':'Barang Masuk / Keluar','kat-kas':'Kategori Kas','kat-barang':'Kategori Barang',ttd:'Tanda Tangan PDF',jamaah:'Laporan untuk Jamaah',pengumuman:'Pengumuman',jadwaljumat:"Jadwal Sholat Jum'at",qurban:'Qurban',identitas:'Identitas Masjid',sync:'Sinkronisasi & Backup'};
 
 function goPage(p){
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
@@ -1234,6 +1906,9 @@ function goPage(p){
   if(p==='ttd') ttdRender();
   if(p==='identitas') identitasRender();
   if(p==='jamaah') jmInit();
+  if(p==='pengumuman') renderPengumumanAdminList();
+  if(p==='jadwaljumat') renderJadwalJumatAdminList();
+  if(p==='qurban') qurbanPageInit();
   if(p==='sync') ghPageInit();
 }
 
@@ -2023,6 +2698,22 @@ function doDelete(type,id){
     catatanData=catatanData.filter(r=>r.id!==id);saveCatatanData();
     if(document.getElementById('modal-catatan-list').classList.contains('open')) renderCatatanListBody();
     renderMinggu();
+  }
+  else if(type==='pengumuman'){
+    pengumumanData=pengumumanData.filter(r=>r.id!==id);savePengumumanData();
+    renderPengumumanAdminList();
+  }
+  else if(type==='jadwaljumat'){
+    jadwalJumatData=jadwalJumatData.filter(r=>r.id!==id);saveJadwalJumatData();
+    renderJadwalJumatAdminList();
+  }
+  else if(type==='qurban'){
+    qurbanData=qurbanData.filter(r=>r.id!==id);save(SK.qurban,qurbanData);
+    renderQurbanAdminList();
+  }
+  else if(type==='penyaluranQurban'){
+    penyaluranQurbanData=penyaluranQurbanData.filter(r=>r.id!==id);save(SK.penyaluranQurban,penyaluranQurbanData);
+    renderPenyaluranAdminList();
   }
   closeConfirm();showToast('Data dihapus.');
 }
@@ -2849,6 +3540,8 @@ function identitasRender(){
   document.getElementById('id-alamat').value=ALAMAT;
   // Logo preview
   updateLogoPreviewUI(LOGO_B64);
+  // Foto Hero preview
+  updateHeroPreviewUI(HERO_B64);
   // Kop preview
   updateKopPreview();
   document.getElementById('identitas-saved-msg').style.display='none';
@@ -2902,18 +3595,53 @@ function hapusLogo(){
   const st=document.getElementById('logo-status');
   if(st){st.textContent='Logo dihapus — klik Simpan Identitas.';st.style.color='var(--emas)';}
 }
+function updateHeroPreviewUI(b64){
+  const img=document.getElementById('hero-preview-img');
+  const ph=document.getElementById('hero-preview-placeholder');
+  const hapusBtn=document.getElementById('hero-hapus-btn');
+  if(b64){
+    img.src=b64;img.style.display='block';ph.style.display='none';
+    if(hapusBtn) hapusBtn.style.display='inline-flex';
+  } else {
+    img.src='';img.style.display='none';ph.style.display='flex';
+    if(hapusBtn) hapusBtn.style.display='none';
+  }
+}
+function onHeroFileChange(e){
+  const file=e.target.files[0];
+  if(!file) return;
+  const st=document.getElementById('hero-status');
+  if(file.size>600*1024){st.textContent='File terlalu besar (maks. 500KB)';st.style.color='var(--red)';return;}
+  const reader=new FileReader();
+  reader.onload=function(ev){
+    HERO_B64=ev.target.result;
+    updateHeroPreviewUI(HERO_B64);
+    st.textContent='Foto hero siap — klik Simpan Identitas untuk menyimpan.';
+    st.style.color='var(--hijau)';
+  };
+  reader.readAsDataURL(file);
+  e.target.value='';
+}
+function hapusHeroFoto(){
+  HERO_B64=null;
+  updateHeroPreviewUI(null);
+  const st=document.getElementById('hero-status');
+  if(st){st.textContent='Foto hero dihapus — klik Simpan Identitas.';st.style.color='var(--emas)';}
+}
 function identitasSave(){
   const nama=(document.getElementById('id-nama').value||'').trim();
   const alamat=(document.getElementById('id-alamat').value||'').trim();
   if(!nama){showToast('Nama masjid tidak boleh kosong!');return;}
   MASJID=nama;ALAMAT=alamat;
   save(SK.identitas,{nama,alamat});
-  // Save/remove logo separately (can be large)
+  // Save/remove logo & foto hero separately (can be large)
   try{
     if(LOGO_B64) localStorage.setItem(SK.logo,LOGO_B64);
     else localStorage.removeItem(SK.logo);
+    if(HERO_B64) localStorage.setItem(SK.heroFoto,HERO_B64);
+    else localStorage.removeItem(SK.heroFoto);
     if(typeof markDirty==='function')markDirty();
-  }catch(e){showToast('Logo gagal disimpan (storage penuh?)');return;}
+  }catch(e){showToast('Logo/foto gagal disimpan (storage penuh?)');return;}
   applyIdentitasSidebar();
   updateKopPreview();
   const msg=document.getElementById('identitas-saved-msg');
@@ -2978,6 +3706,8 @@ function jmBuildData(rows){
   return {
     masjid: MASJID,
     alamat: ALAMAT,
+    logo: LOGO_B64 || '',
+    heroFoto: HERO_B64 || '',
     periode: label,
     bulan: bln||'',
     minggu: mgg||'',
@@ -2994,6 +3724,26 @@ function jmBuildData(rows){
       masuk: r.masuk||0,
       keluar: r.keluar||0,
       saldo: r.saldo
+    })),
+    // Pengumuman (papan info) selalu disertakan penuh, independen dari periode laporan keuangan yang dipilih
+    pengumuman: (typeof pengumumanData!=='undefined' ? pengumumanData : []).map(p=>({
+      id: p.id, tipe: p.tipe, judul: p.judul, tanggal: p.tanggal||'', keterangan: p.keterangan||'',
+      isi: p.isi||'', fileBase64: p.fileBase64||'', filename: p.filename||''
+    })),
+    // Jadwal Sholat Jum'at juga selalu disertakan penuh
+    jadwalJumat: (typeof jadwalJumatData!=='undefined' ? jadwalJumatData : []).map(j=>({
+      id: j.id, tanggal: j.tanggal, waktu: j.waktu||'', khatib: j.khatib, imam: j.imam||'',
+      muadzin: j.muadzin||'', tema: j.tema||'', catatan: j.catatan||''
+    })),
+    // Qurban — hanya bermakna dipublikasikan kalau qurbanAktif true, tapi datanya tetap disertakan
+    // (halaman jamaah yang memutuskan menampilkan tab-nya atau tidak berdasarkan qurbanAktif)
+    qurbanAktif: (typeof qurbanAktif!=='undefined') ? !!qurbanAktif : false,
+    qurban: (typeof qurbanData!=='undefined' ? qurbanData : []).map(q=>({
+      id: q.id, jenis: q.jenis, label: q.label, status: q.status,
+      peserta: (q.peserta||[]).map(p=>({nama:p.nama, untuk:p.untuk||''}))
+    })),
+    penyaluranQurban: (typeof penyaluranQurbanData!=='undefined' ? penyaluranQurbanData : []).map(p=>({
+      id: p.id, tujuan: p.tujuan, keterangan: p.keterangan||''
     }))
   };
 }
@@ -3051,7 +3801,7 @@ function jmPreview(){
 
 function jmGenerate(){
   const rows=jmGetFiltered();
-  if(!rows.length){showToast('Tidak ada data untuk periode ini!');return;}
+  if(!rows.length && !(pengumumanData&&pengumumanData.length) && !(jadwalJumatData&&jadwalJumatData.length) && !(qurbanData&&qurbanData.length)){showToast('Tidak ada data laporan, pengumuman, jadwal, maupun qurban untuk di-generate!');return;}
   const d=jmBuildData(rows);
   const js=`// Data laporan keuangan Masjid Baiturrahman Panjunan
 // Dibuat otomatis pada: ${d.diperbarui}
@@ -3278,7 +4028,7 @@ function gatherAllData(){
   return {
     _meta:{savedAt:new Date().toISOString(), app:'masjid-app'},
     keu:keuData, inv:invData, trxBrg:trxBrgData, katKeu:katKeuData, katBrg:katBrgData,
-    identitas:{nama:MASJID, alamat:ALAMAT}, logo:LOGO_B64, ttd:ttdCfg, catatan:catatanData
+    identitas:{nama:MASJID, alamat:ALAMAT}, logo:LOGO_B64, heroFoto:HERO_B64, ttd:ttdCfg, catatan:catatanData
   };
 }
 // Terapkan object hasil download ke semua state + localStorage yang sudah ada (tanpa mengubah struktur data lama)
@@ -3292,6 +4042,7 @@ function applyAllData(d){
   catatanData=Array.isArray(d.catatan)?d.catatan:[];
   if(d.identitas){MASJID=d.identitas.nama||MASJID;ALAMAT=d.identitas.alamat||ALAMAT;}
   LOGO_B64=d.logo||null;
+  HERO_B64=d.heroFoto||null;
   if(d.ttd && typeof d.ttd==='object' && Array.isArray(d.ttd.cols)) ttdCfg=d.ttd;
   // simpan ke localStorage lewat mekanisme yang sudah ada
   save(SK.keu,keuData); save(SK.inv,invData); save(SK.trxBrg,trxBrgData);
@@ -3299,6 +4050,7 @@ function applyAllData(d){
   save(SK.catatan,catatanData);
   save(SK.identitas,{nama:MASJID,alamat:ALAMAT});
   if(LOGO_B64) localStorage.setItem(SK.logo,LOGO_B64); else localStorage.removeItem(SK.logo);
+  if(HERO_B64) localStorage.setItem(SK.heroFoto,HERO_B64); else localStorage.removeItem(SK.heroFoto);
   save(SK.ttd,ttdCfg);
   // refresh seluruh tampilan
   applyIdentitasSidebar();
