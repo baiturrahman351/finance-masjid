@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "savedAt": "2026-07-11T12:29:53.064Z",
+    "savedAt": "2026-07-11T12:31:25.619Z",
     "app": "masjid-app"
   },
   "keu": [
@@ -377,6 +377,28 @@
       "kat": "Kas Pembangunan",
       "masuk": 0,
       "keluar": 1440000
+    },
+    {
+      "id": 1783773010369,
+      "tanggal": "2026-07-11",
+      "minggu": 1,
+      "bulan": "Juli",
+      "tahun": 2026,
+      "ket": "Pembelian Kapi",
+      "kat": "Kas Pembangunan",
+      "masuk": 0,
+      "keluar": 60000
+    },
+    {
+      "id": 1783773045040,
+      "tanggal": "2026-07-11",
+      "minggu": 1,
+      "bulan": "Juli",
+      "tahun": 2026,
+      "ket": "Konsumsi Tukang",
+      "kat": "Kas Pembangunan",
+      "masuk": 0,
+      "keluar": 60000
     }
   ],
   "inv": [],
