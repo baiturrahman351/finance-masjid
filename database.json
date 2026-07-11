@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "savedAt": "2026-07-11T03:54:05.319Z",
+    "savedAt": "2026-07-11T12:29:53.064Z",
     "app": "masjid-app"
   },
   "keu": [
@@ -366,6 +366,17 @@
       "kat": "Kas Pembangunan",
       "masuk": 0,
       "keluar": 40000
+    },
+    {
+      "id": 1783772987770,
+      "tanggal": "2026-07-11",
+      "minggu": 1,
+      "bulan": "Juli",
+      "tahun": 2026,
+      "ket": "Gaji tukang + Pembantu 6 Hari",
+      "kat": "Kas Pembangunan",
+      "masuk": 0,
+      "keluar": 1440000
     }
   ],
   "inv": [],
