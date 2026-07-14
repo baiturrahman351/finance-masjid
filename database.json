@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "savedAt": "2026-07-11T13:41:39.562Z",
+    "savedAt": "2026-07-14T06:23:26.639Z",
     "app": "masjid-app"
   },
   "keu": [
@@ -399,6 +399,17 @@
       "kat": "Kas Pembangunan",
       "masuk": 0,
       "keluar": 60000
+    },
+    {
+      "id": 1784010202030,
+      "tanggal": "2026-07-14",
+      "minggu": 2,
+      "bulan": "Juli",
+      "tahun": 2026,
+      "ket": "6 x Risplang 50x200",
+      "kat": "Kas Pembangunan",
+      "masuk": 0,
+      "keluar": 1020000
     }
   ],
   "inv": [],
