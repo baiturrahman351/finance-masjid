@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "savedAt": "2026-07-15T05:02:03.295Z",
+    "savedAt": "2026-07-15T21:58:13.533Z",
     "app": "masjid-app"
   },
   "keu": [
@@ -432,6 +432,17 @@
       "kat": "Kas Pembangunan",
       "masuk": 0,
       "keluar": 525000
+    },
+    {
+      "id": 1784152689425,
+      "tanggal": "2026-07-15",
+      "minggu": 2,
+      "bulan": "Juli",
+      "tahun": 2026,
+      "ket": "Power CCTV",
+      "kat": "Kas Pembangunan",
+      "masuk": 0,
+      "keluar": 150000
     }
   ],
   "inv": [],
