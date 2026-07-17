@@ -1,5 +1,5 @@
 // Data laporan keuangan Masjid Baiturrahman Panjunan
-// Dibuat otomatis pada: 18 Juli 2026 pukul 05.20
+// Dibuat otomatis pada: 18 Juli 2026 pukul 05.52
 // Jangan edit file ini secara manual — generate ulang dari aplikasi
 
 const LAPORAN_DATA = {
@@ -11,7 +11,7 @@ const LAPORAN_DATA = {
   "bulan": "Juli",
   "minggu": "2",
   "tahun": "2026",
-  "diperbarui": "18 Juli 2026 pukul 05.20",
+  "diperbarui": "18 Juli 2026 pukul 05.52",
   "saldoAwal": 19160000,
   "totalMasuk": 870000,
   "totalKeluar": 2155000,
@@ -83,16 +83,6 @@ const LAPORAN_DATA = {
     }
   ],
   "jadwalJumat": [
-    {
-      "id": 1783697172227,
-      "tanggal": "2026-07-17",
-      "waktu": "11.45",
-      "khatib": "Ust. Mohamad Heri",
-      "imam": "Ust. Mohamad Heri",
-      "muadzin": "Bpk. Kusnan",
-      "tema": "-",
-      "catatan": "-"
-    },
     {
       "id": 1783697222181,
       "tanggal": "2026-07-24",
