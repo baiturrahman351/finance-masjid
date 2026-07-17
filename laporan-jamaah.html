@@ -635,17 +635,18 @@ function jjNextUpcomingIdPublic(list){
 function renderJadwalJumat(list){
   const el = document.getElementById('jadwaljumat-area');
   if(!el) return;
+  // Jaga-jaga: sembunyikan jadwal yang tanggalnya sudah lewat, meskipun data.js belum sempat di-generate ulang oleh admin
+  const todayStr0 = new Date().toISOString().slice(0,10);
+  list = (list || []).filter(j => j.tanggal >= todayStr0);
   if(!list || !list.length){
     el.innerHTML = `<div class="sect-head" style="margin-top:14px">🕌 Jadwal Sholat Jum'at</div>
       <div class="empty-box"><div class="empty-icon">🕌</div><div class="empty-title">Belum ada jadwal</div><div class="empty-sub">Jadwal Khatib &amp; Imam Sholat Jum'at akan tampil di sini.</div></div>`;
     return;
   }
   const nextId = jjNextUpcomingIdPublic(list);
-  // Urutan: yang akan datang duluan (ascending), lalu yang sudah lewat di bawahnya (terbaru dulu)
+  // Semua yang tersisa sudah pasti "akan datang" (yang lewat sudah difilter di atas), urut tanggal terdekat dulu
   const todayStr = new Date().toISOString().slice(0,10);
-  const upcoming = list.filter(j=>j.tanggal>=todayStr).sort((a,b)=>a.tanggal.localeCompare(b.tanggal));
-  const past = list.filter(j=>j.tanggal<todayStr).sort((a,b)=>b.tanggal.localeCompare(a.tanggal));
-  const sorted = [...upcoming, ...past];
+  const sorted = [...list].sort((a,b)=>a.tanggal.localeCompare(b.tanggal));
 
   let html = `<div class="sect-head" style="margin-top:14px">🕌 Jadwal Sholat Jum'at</div><div class="jj-wrap">`;
   sorted.forEach(j=>{
