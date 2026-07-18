@@ -1,5 +1,5 @@
 // Data laporan keuangan Masjid Baiturrahman Panjunan
-// Dibuat otomatis pada: 18 Juli 2026 pukul 17.59
+// Dibuat otomatis pada: 18 Juli 2026 pukul 18.45
 // Jangan edit file ini secara manual — generate ulang dari aplikasi
 
 const LAPORAN_DATA = {
@@ -11,7 +11,7 @@ const LAPORAN_DATA = {
   "bulan": "Juli",
   "minggu": "2",
   "tahun": "2026",
-  "diperbarui": "18 Juli 2026 pukul 17.59",
+  "diperbarui": "18 Juli 2026 pukul 18.45",
   "saldoAwal": 19160000,
   "totalMasuk": 870000,
   "totalKeluar": 2155000,
@@ -80,6 +80,17 @@ const LAPORAN_DATA = {
       "fileUrl": "https://raw.githubusercontent.com/baiturrahman351/finance-masjid/main/pengumuman-files/1784326814486-MasjidUcapan-100.jpg",
       "fileBase64": "",
       "filename": "MasjidUcapan-100.jpg"
+    },
+    {
+      "id": 1784375093550,
+      "tipe": "teks",
+      "judul": "Pengumuman Kerja Bakti",
+      "tanggal": "2026-07-19",
+      "keterangan": "",
+      "isi": "Kepada seluruh Bapak-bapak Jamaah Masjid Baiturrahman, kami mengundang Bapak-bapak untuk berpartisipasi dalam\n\n- Kerja bakti pengecoran atap tempat wudhu Masjid Baiturrahman.\n\nSehubungan dengan hal tersebut, kami mengharapkan kehadiran dan partisipasi Bapak-bapak demi kelancaran pembangunan fasilitas masjid.\n\nDemikian pengumuman ini kami sampaikan. Atas perhatian, kehadiran, dan partisipasi Bapak-bapak, kami ucapkan terima kasih.\n\nWassalamu'alaikum warahmatullahi wabarakatuh.",
+      "fileUrl": "",
+      "fileBase64": "",
+      "filename": ""
     }
   ],
   "jadwalJumat": [
