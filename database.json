@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "savedAt": "2026-07-19T22:11:39.263Z",
+    "savedAt": "2026-07-19T22:39:23.935Z",
     "app": "masjid-app"
   },
   "keu": [
@@ -489,7 +489,20 @@
       "keluar": 90000
     }
   ],
-  "inv": [],
+  "inv": [
+    {
+      "id": 1784500762734,
+      "nama": "Ayunan",
+      "kategori": "Furnitur",
+      "satuan": "set",
+      "stok": 1,
+      "kondisi": "Baik",
+      "lokasi": "Halaman Masjid",
+      "tglMasuk": "2026-07-19",
+      "harga": 0,
+      "ket": "Donasi dari hamba Allah"
+    }
+  ],
   "trxBrg": [],
   "katKeu": [
     "Infak",
